@@ -1,0 +1,614 @@
+<HTML>
+<HEAD>
+<TITLE>Synthesis Report</TITLE>
+<link href="file:///C:/lscc/radiant/2023.1/data/theme/css/light/report.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="file:///C:/lscc/radiant/2023.1/data/theme/css/print/report.css" rel="stylesheet" type="text/css" media="print"/>
+<style type="text/css">
+#toc {
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  padding: 2px 5px 2px 5px;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+}
+#toc_list {
+  display: none;
+  }
+</style>
+
+<script type="text/javascript">
+<!--
+function showTocList() {
+var a = document.getElementById("toc_list");
+a.style.display = "block";
+}
+
+function hideTocList() {
+var a = document.getElementById("toc_list");
+if (a)
+    a.style.display = "none";
+}
+
+//-->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<DIV id="content" onclick="hideTocList()"><PRE>
+<A name="Syn"></A><B><U><big>Synthesis Report</big></U></B>
+synthesis:  version Radiant Software (64-bit) 2023.1.0.43.3
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Tue Dec 10 11:54:59 2024
+
+
+Command Line:  C:\lscc\radiant\2023.1\ispfpga\bin\nt64\synthesis.exe -f guitar_hero_1154_impl_1_lattice.synproj -gui -msgset Z:/guitar_hero_tests/promote.xml 
+
+Synthesis options:
+The -a option is iCE40UP.
+The -t option is SG48.
+The -sp option is High-Performance_1.2V.
+The -p option is iCE40UP5K.
+                                                          
+
+
+##########################################################
+
+
+### Lattice Family     : iCE40UP
+
+
+### Device             : iCE40UP5K
+
+
+### Package            : SG48
+
+
+### Performance Grade  : High-Performance_1.2V
+
+
+                                                         
+
+
+INFO <35001786> - synthesis: User-Selected Strategy Settings
+Optimization goal = Area
+Top-level module name = top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3 (default)
+RWCheckOnRam = 0
+
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+
+Mux style = auto (Default)
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+Output HDL file name = guitar_hero_1154_impl_1.vm.
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-sdc option: SDC file input is guitar_hero_1154_impl_1_cpe.ldc.
+-vh2008
+
+-path C:/lscc/radiant/2023.1/ispfpga/ice40tp/data (searchpath added)
+-path Z:/guitar_hero_tests (searchpath added)
+-path Z:/guitar_hero_tests/impl_1 (searchpath added)
+-path Z:/guitar_hero_tests/pll1 (searchpath added)
+Mixed language design
+Verilog design file = C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.v
+Verilog design file = Z:/guitar_hero_tests/pll1/rtl/pll1.v
+VHDL library = pmi
+VHDL design file = C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/vga.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/top.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/patterngen.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/rom.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/one.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/zero.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/DDDD.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/three.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/two.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/four.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/five.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/six.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/seven.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/eight.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/nine.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/end_screen.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/keyCompare.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/playAudio.vhd
+VHDL library = work
+VHDL design file = Z:/guitar_hero_tests/source/impl_1/game.vhd
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+WARNING <35935050> - synthesis: input port TRIM9 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM8 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM7 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM6 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM5 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM4 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM3 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM2 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM1 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM0 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port I is not connected on this instance. VDB-5050
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v. VERI-1482
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(1): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_addsub.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_addsub.v(40): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(2): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_add.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_add.v(50): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/adder/rtl/lscc_adder.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(3): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_complex_mult.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_complex_mult.v(52): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(4): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_counter.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_counter.v(39): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/counter/rtl/lscc_cntr.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(5): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_fifo.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_fifo.v(44): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../avant/fifo/rtl/lscc_fifo.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(6): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_fifo_dc.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_fifo_dc.v(47): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../avant/fifo_dc/rtl/lscc_fifo_dc.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(7): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_mac.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_mac.v(52): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(8): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_multaddsubsum.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_multaddsubsum.v(53): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(9): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_multaddsub.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_multaddsub.v(52): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(10): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_mult.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_mult.v(51): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(11): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dp.v(48): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(12): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dq.v(45): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(13): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_rom.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_rom.v(45): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../avant/rom/rtl/lscc_rom.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(14): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_sub.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_sub.v(50): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(15): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dp_be.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dp_be.v(49): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../avant/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(16): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dq_be.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ram_dq_be.v(45): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/../avant/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.v(17): analyzing included file c:/lscc/radiant/2023.1/ip/pmi/pmi_dsp.v. VERI-1328
+Analyzing Verilog file z:/guitar_hero_tests/pll1/rtl/pll1.v. VERI-1482
+Analyzing VHDL file c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.vhd. VHDL-1481
+Analyzing VHDL file c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.vhd
+
+INFO <35921014> - synthesis: c:/lscc/radiant/2023.1/ip/pmi/pmi_ice40up.vhd(4): analyzing package components. VHDL-1014
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/vga.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/vga.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/vga.vhd(5): analyzing entity vga. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/vga.vhd(17): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/top.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/top.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/top.vhd(5): analyzing entity top. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/top.vhd(20): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/patterngen.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/patterngen.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/patterngen.vhd(5): analyzing entity gen. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/patterngen.vhd(22): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/rom.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/rom.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/rom.vhd(5): analyzing entity rom. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/rom.vhd(13): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/one.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/one.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/one.vhd(5): analyzing entity one. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/one.vhd(13): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/zero.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/zero.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/zero.vhd(5): analyzing entity zero. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/zero.vhd(13): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/dddd.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/dddd.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/dddd.vhd(6): analyzing entity dddd. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/dddd.vhd(15): analyzing architecture sim. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/three.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/three.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/three.vhd(5): analyzing entity three. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/three.vhd(13): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/two.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/two.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/two.vhd(5): analyzing entity two. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/two.vhd(13): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/four.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/four.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/four.vhd(5): analyzing entity four. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/four.vhd(13): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/five.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/five.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/five.vhd(5): analyzing entity five. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/five.vhd(13): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/six.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/six.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/six.vhd(5): analyzing entity six. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/six.vhd(13): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/seven.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/seven.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/seven.vhd(5): analyzing entity seven. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/seven.vhd(13): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/eight.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/eight.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/eight.vhd(5): analyzing entity eight. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/eight.vhd(13): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/nine.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/nine.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/nine.vhd(5): analyzing entity nine. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/nine.vhd(13): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/end_screen.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/end_screen.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/end_screen.vhd(5): analyzing entity end_screen. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/end_screen.vhd(13): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/keycompare.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/keycompare.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/keycompare.vhd(5): analyzing entity keycompare. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/keycompare.vhd(16): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/playaudio.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/playaudio.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/playaudio.vhd(5): analyzing entity playaudio. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/playaudio.vhd(14): analyzing architecture synth. VHDL-1010
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/game.vhd. VHDL-1481
+Analyzing VHDL file z:/guitar_hero_tests/source/impl_1/game.vhd
+
+INFO <35921012> - synthesis: z:/guitar_hero_tests/source/impl_1/game.vhd(5): analyzing entity game. VHDL-1012
+INFO <35921010> - synthesis: z:/guitar_hero_tests/source/impl_1/game.vhd(21): analyzing architecture synth. VHDL-1010
+INFO <35921504> - synthesis: The default VHDL library search path is now "Z:/guitar_hero_tests/impl_1". VHDL-1504
+Top module language type = VHDL.
+WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
+WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
+Top module name (VHDL, mixed language): top
+                                                         
+
+
+### Number of Logic Cells: 5280
+
+
+### Number of RAM Blocks: 30
+
+
+### Number of DSP Blocks: 8
+
+
+### Number of PLLs: 1
+
+
+### Number of IO Pins: 56
+
+
+##########################################################
+
+
+                                                         
+
+
+WARNING <35001771> - synthesis: Initial value found on net gnd will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net tensplace[11] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net tensplace[10] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net tensplace[9] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[17] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[16] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[15] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[14] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[13] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[12] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[11] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[10] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[9] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[8] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[7] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[6] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[5] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[4] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[3] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[2] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[1] will be ignored due to unrecognized driver type
+WARNING <35001771> - synthesis: Initial value found on net limit[0] will be ignored due to unrecognized driver type
+WARNING <35935049> - synthesis: input port sclk_i remains unconnected for this instance. VDB-5049
+WARNING <35935049> - synthesis: input port sdi_i remains unconnected for this instance. VDB-5049
+WARNING <35931002> - synthesis: z:/guitar_hero_tests/pll1/rtl/pll1.v(139): net \pll/lscc_pll_inst/sclk_i does not have a driver. VDB-1002
+WARNING <35931002> - synthesis: z:/guitar_hero_tests/pll1/rtl/pll1.v(140): net \pll/lscc_pll_inst/sdi_i does not have a driver. VDB-1002
+######## Missing driver on net \pll/lscc_pll_inst/sclk_i. Patching with GND.
+######## Missing driver on net \pll/lscc_pll_inst/sdi_i. Patching with GND.
+
+
+
+Duplicate register/latch removal. i57 is a one-to-one match with i29.
+Duplicate register/latch removal. i53 is a one-to-one match with i33.
+Duplicate register/latch removal. i49 is a one-to-one match with i25.
+Duplicate register/latch removal. i57 is a one-to-one match with i53.
+Mapped 1 multiplier(s)
+
+
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position1y_1163__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/halfnotey2_1161__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position10y2_1159__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position14y2_1157__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position2y2_1155__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position3y2_1153__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position4y2_1151__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position11y2_1149__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position14y_1143__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position13y_1141__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position12y_1139__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position11y_1137__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position10y_1135__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position9y_1133__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position9y2_1131__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position7y_1129__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position6y_1127__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position4y_1125__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position3y_1123__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position2y_1120__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position6y2_1147__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position1y2_1145__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position1y_1163__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/halfnotey2_1161__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position10y2_1159__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position14y2_1157__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position2y2_1155__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position3y2_1153__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position4y2_1151__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position11y2_1149__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position14y_1143__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position13y_1141__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position12y_1139__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position11y_1137__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position10y_1135__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position9y_1133__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position9y2_1131__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position7y_1129__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position6y_1127__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position4y_1125__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position3y_1123__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position2y_1120__i1 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position6y2_1147__i0 clock is stuck at Zero. VDB-5040
+WARNING <35935040> - synthesis: Register \gen1/game1/bar_position1y2_1145__i0 clock is stuck at Zero. VDB-5040
+Duplicate register/latch removal. \gen1/zero1/rgb_i0 is a one-to-one match with \gen1/zero1/rgb_i2.
+Duplicate register/latch removal. \gen1/one1/rgb_i0 is a one-to-one match with \gen1/one1/rgb_i2.
+Duplicate register/latch removal. \gen1/two1/rgb_i0 is a one-to-one match with \gen1/two1/rgb_i2.
+Duplicate register/latch removal. \gen1/three1/rgb_i0 is a one-to-one match with \gen1/three1/rgb_i2.
+Duplicate register/latch removal. \gen1/four1/rgb_i0 is a one-to-one match with \gen1/four1/rgb_i2.
+Duplicate register/latch removal. \gen1/six1/rgb_i0 is a one-to-one match with \gen1/six1/rgb_i2.
+Duplicate register/latch removal. \gen1/seven1/rgb_i0 is a one-to-one match with \gen1/seven1/rgb_i2.
+Duplicate register/latch removal. \gen1/eight1/rgb_i0 is a one-to-one match with \gen1/eight1/rgb_i2.
+Duplicate register/latch removal. \gen1/nine1/rgb_i0 is a one-to-one match with \gen1/nine1/rgb_i2.
+Duplicate register/latch removal. \gen1/nine1/rgb_i4 is a one-to-one match with \gen1/nine1/rgb_i0.
+Duplicate register/latch removal. \gen1/eight1/rgb_i4 is a one-to-one match with \gen1/eight1/rgb_i0.
+Duplicate register/latch removal. \gen1/seven1/rgb_i4 is a one-to-one match with \gen1/seven1/rgb_i0.
+Duplicate register/latch removal. \gen1/six1/rgb_i4 is a one-to-one match with \gen1/six1/rgb_i0.
+Duplicate register/latch removal. \gen1/four1/rgb_i4 is a one-to-one match with \gen1/four1/rgb_i0.
+Duplicate register/latch removal. \gen1/three1/rgb_i4 is a one-to-one match with \gen1/three1/rgb_i0.
+Duplicate register/latch removal. \gen1/two1/rgb_i4 is a one-to-one match with \gen1/two1/rgb_i0.
+Duplicate register/latch removal. \gen1/one1/rgb_i4 is a one-to-one match with \gen1/one1/rgb_i0.
+Duplicate register/latch removal. \gen1/zero1/rgb_i4 is a one-to-one match with \gen1/zero1/rgb_i0.
+Duplicate register/latch removal. \gen1/nine1/rgb_i3 is a one-to-one match with \gen1/nine1/rgb_i1.
+Duplicate register/latch removal. \gen1/eight1/rgb_i3 is a one-to-one match with \gen1/eight1/rgb_i1.
+Duplicate register/latch removal. \gen1/seven1/rgb_i3 is a one-to-one match with \gen1/seven1/rgb_i1.
+Duplicate register/latch removal. \gen1/six1/rgb_i3 is a one-to-one match with \gen1/six1/rgb_i1.
+Duplicate register/latch removal. \gen1/four1/rgb_i3 is a one-to-one match with \gen1/four1/rgb_i1.
+Duplicate register/latch removal. \gen1/three1/rgb_i3 is a one-to-one match with \gen1/three1/rgb_i1.
+Duplicate register/latch removal. \gen1/two1/rgb_i3 is a one-to-one match with \gen1/two1/rgb_i1.
+Duplicate register/latch removal. \gen1/one1/rgb_i3 is a one-to-one match with \gen1/one1/rgb_i1.
+Duplicate register/latch removal. \gen1/zero1/rgb_i3 is a one-to-one match with \gen1/zero1/rgb_i1.
+WARNING <35001779> - synthesis: Initial value found on instance \gen1/game1/bar1 will be ignored.
+
+
+<A name="lse_area"></A><B><U><big>Area Report</big></U></B>
+
+################### Begin Area Report (top)######################
+Number of register bits => 363 of 5280 (6 % )
+EBR_B => 27
+CCU2 => 281
+FD1P3XZ => 363
+IB => 6
+LUT4 => 1677
+MAC16 => 1
+OB => 10
+PLL_B => 1
+################### End Area Report ##################
+Number of odd-length carry chains : 14
+Number of even-length carry chains : 35
+
+
+<A name="lse_clock"></A><B><U><big>Clock Report</big></U></B>
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 3
+  Net : pll/lscc_pll_inst/vga_clk, loads : 0
+  Net : clkin_c, loads : 1
+  Net : pll/lscc_pll_inst/clkout_c, loads : 1
+Clock Enable Nets
+Number of Clock Enables: 0
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : vga1/y[3], loads : 156
+  Net : vga1/y[4], loads : 136
+  Net : vga1/y[2], loads : 133
+  Net : vga1/y[5], loads : 121
+  Net : vga1/x[4], loads : 98
+  Net : vga1/x[3], loads : 91
+  Net : vga1/y[6], loads : 85
+  Net : vga1/y[1], loads : 85
+  Net : vga1/x[2], loads : 82
+  Net : vga1/x[1], loads : 74
+################### End Clock Report ##################
+
+Peak Memory Usage: 812 MB
+
+--------------------------------------------------------------
+Total CPU Time: 1 mins 1 secs 
+Total REAL Time: 1 mins 13 secs 
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></DIV>
+
+<DIV id="toc" class="radiant"><span onmousemove="showTocList()">Contents</span>
+<UL id="toc_list">
+<LI><A href=#Syn>Top</A></LI>
+<LI><A href=#lse_area>Area Report</A></LI>
+<LI><A href=#lse_clock>Clock Report</A></LI>
+</UL>
+</DIV>
+
+<button id="back_to_top" class="radiant" onclick="scrollToTop()">&lt;</button>
+<script type="text/javascript">
+<!--
+var scrollStep = 0;
+function scrollToTop(){
+  var funScroll = function() {
+    var top = document.body.scrollTop;
+    if (top == 0) {
+      scrollStep = 0;
+      return;
+    }
+    if (scrollStep == 0)
+      scrollStep = top/20 + 1;
+    top -= scrollStep;
+    if (top < 0)
+      top = 0;
+    document.body.scrollTop = top;
+    requestAnimationFrame(funScroll);
+  };
+  funScroll();
+}
+
+window.addEventListener('scroll', function(e) {
+  var backToTop = document.getElementById('back_to_top')
+  if (document.body.scrollTop > 0) {
+    backToTop.style.display = 'block';
+  } else {	backToTop.style.display = 'none'  }});
+
+//-->
+</script>
+
+<style type="text/css">
+#back_to_top {
+  bottom:20px; right:20px;
+  width:30px; height:30px;
+  font-size: 20px;
+  padding: 2px 5px 2px 5px;
+  position:fixed;
+  background-color:rgba(210,210,210,0.1);
+  border-style: solid;
+  border-color: rgba(192,192,192,0.8);
+  border-width:1px;
+  display:none;
+  -webkit-transform: rotate(90deg);
+  -webkit-transform-origin:50% 50%;
+}
+#back_to_top:focus {
+  outline-width:0px;
+}
+</style>
+
+</BODY>
+

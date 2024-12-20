@@ -1,0 +1,8 @@
+-ver "C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2023.1/ip/pmi/pmi_iCE40UP.vhd"
+-lib "work" -vhd "Z:/guitar_hero_tests/source/impl_1/vga.vhd" "Z:/guitar_hero_tests/source/impl_1/top.vhd" "Z:/guitar_hero_tests/source/impl_1/patterngen.vhd" "Z:/guitar_hero_tests/source/impl_1/rom.vhd" "Z:/guitar_hero_tests/source/impl_1/one.vhd" "Z:/guitar_hero_tests/source/impl_1/zero.vhd" "Z:/guitar_hero_tests/source/impl_1/DDDD.vhd" "Z:/guitar_hero_tests/source/impl_1/three.vhd" "Z:/guitar_hero_tests/source/impl_1/two.vhd" "Z:/guitar_hero_tests/source/impl_1/four.vhd" "Z:/guitar_hero_tests/source/impl_1/five.vhd" "Z:/guitar_hero_tests/source/impl_1/six.vhd" "Z:/guitar_hero_tests/source/impl_1/seven.vhd" "Z:/guitar_hero_tests/source/impl_1/eight.vhd" "Z:/guitar_hero_tests/source/impl_1/nine.vhd" "Z:/guitar_hero_tests/source/impl_1/end_screen.vhd" "Z:/guitar_hero_tests/source/impl_1/keyCompare.vhd" "Z:/guitar_hero_tests/source/impl_1/playAudio.vhd" "Z:/guitar_hero_tests/source/impl_1/game.vhd"
+-path "Z:/guitar_hero_tests"
+-vh2008
+-top top
+-isTop
+-a "iCE40UP"

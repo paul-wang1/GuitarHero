@@ -1,0 +1,404 @@
+                         Lattice Mapping Report File
+Design:  top
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:  High-Performance_1.2V
+
+Mapper:    version Radiant Software (64-bit) 2023.1.0.43.3
+Mapped on: Tue Dec 10 11:56:13 2024
+
+Design Information
+------------------
+
+Command line:   map -i guitar_hero_1154_impl_1_syn.udb -pdc
+     Z:/guitar_hero_tests/new.pdc -o guitar_hero_1154_impl_1_map.udb -mp
+     guitar_hero_1154_impl_1.mrp -hierrpt -gui
+
+Design Summary
+--------------
+
+   Number of slice registers: 363 out of  5280 (7%)
+   Number of I/O registers:      0 out of   117 (0%)
+   Number of LUT4s:           2259 out of  5280 (43%)
+      Number of logic LUT4s:             1678
+      Number of inserted feedthru LUT4s:   9
+      Number of replicated LUT4s:         10
+      Number of ripple logic:            281 (562 LUT4s)
+   Number of IO sites used:   16 out of 39 (41%)
+      Number of IO sites used for general PIO: 16
+      Number of IO sites used for I3C: 0 out of 2 (0%)
+      (note: If I3C is not used, its site can be used as general PIO)
+      Number of IO sites used for PIO+I3C: 16 out of 36 (44%)
+      Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
+      (note: If RGB LED drivers are not used, sites can be used as OD outputs,
+       see TN1288 iCE40 LED Driver Usage Guide)
+      Number of IO sites used for PIO+I3C+OD+RGB: 16 out of 39 (41%)
+   Number of DSPs:             1 out of 8 (12%)
+   Number of I2Cs:             0 out of 2 (0%)
+   Number of High Speed OSCs:  0 out of 1 (0%)
+   Number of Low Speed OSCs:   0 out of 1 (0%)
+   Number of RGB PWM:          0 out of 1 (0%)
+   Number of RGB Drivers:      0 out of 1 (0%)
+   Number of SCL FILTERs:      0 out of 2 (0%)
+   Number of SRAMs:            0 out of 4 (0%)
+   Number of WARMBOOTs:        0 out of 1 (0%)
+   Number of SPIs:             0 out of 2 (0%)
+   Number of EBRs:             27 out of 30 (90%)
+   Number of PLLs:             1 out of 1 (100%)
+   Number of Clocks:  2
+      Net vga_clk: 269 loads, 269 rising, 0 falling (Driver: Pin
+     pll.lscc_pll_inst.u_PLL_B/OUTGLOBAL)
+      Net clkin_c: 1 loads, 1 rising, 0 falling (Driver: Port clkin)
+   Number of Clock Enables:  32
+      Net VCC_net: 81 loads, 0 SLICEs
+      Net decoder_value_1__N_79: 4 loads, 4 SLICEs
+      Net gen1.game1.counter_0__N_349: 17 loads, 17 SLICEs
+      Net gen1.game1.bar_position1y_2__N_373: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position4y2_2__N_733: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position3y_2__N_421: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position4y_2__N_445: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position7y_2__N_493: 5 loads, 5 SLICEs
+
+                                    Page 1
+
+
+
+
+
+Design Summary (cont)
+---------------------
+      Net gen1.game1.bar_position9y_2__N_541: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position9y2_2__N_517: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position10y_2__N_565: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position11y_2__N_589: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position14y_2__N_661: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position12y_2__N_613: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position13y_2__N_637: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position6y_2__N_469: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position11y2_2__N_829: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position2y_2__N_397: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position3y2_2__N_757: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position14y2_2__N_805: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position2y2_2__N_781: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position10y2_2__N_853: 5 loads, 5 SLICEs
+      Net gen1.game1.halfnotey2_2__N_877: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position6y2_2__N_709: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position1y2_2__N_685: 5 loads, 5 SLICEs
+      Net gen1.game1.expectedKeyFromPatGen_0__N_65: 1 loads, 1 SLICEs
+      Net gen1.game1.expectedKeyFromPatGen_1__N_63: 1 loads, 1 SLICEs
+      Net gen1.game1.expectedKeyFromPatGen_2__N_61: 1 loads, 1 SLICEs
+      Net gen1.game1.expectedKeyFromPatGen_3__N_59: 1 loads, 1 SLICEs
+      Net gen1.game1.expectedKeyFromPatGen_4__N_57: 1 loads, 1 SLICEs
+      Net audio.audioTone_c_N_890: 1 loads, 1 SLICEs
+      Net vga1.ypos_9__N_1003: 17 loads, 17 SLICEs
+   Number of LSRs:  38
+      Net curr_state[0]: 1 loads, 1 SLICEs
+      Net decoder_value_1__N_80: 4 loads, 4 SLICEs
+      Net zero_rgb_0__N_126: 1 loads, 1 SLICEs
+      Net two_rgb_0__N_134: 1 loads, 1 SLICEs
+      Net three_rgb_0__N_138: 1 loads, 1 SLICEs
+      Net six_rgb_0__N_146: 1 loads, 1 SLICEs
+      Net seven_rgb_0__N_150: 1 loads, 1 SLICEs
+      Net one_rgb_0__N_130: 1 loads, 1 SLICEs
+      Net nine_rgb_3__N_158: 1 loads, 1 SLICEs
+      Net gen1.game1.counter_0__N_350: 17 loads, 17 SLICEs
+      Net gen1.game1.bar_position1y_2__N_374: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position6y_2__N_470: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position2y_2__N_398: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position1y2_2__N_686: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position6y2_2__N_710: 5 loads, 5 SLICEs
+      Net gen1.game1.halfnotey2_2__N_878: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position10y2_2__N_854: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position2y2_2__N_782: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position14y2_2__N_806: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position3y2_2__N_758: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position11y2_2__N_830: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position13y_2__N_638: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position12y_2__N_614: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position14y_2__N_662: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position11y_2__N_590: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position10y_2__N_566: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position9y2_2__N_518: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position9y_2__N_542: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position7y_2__N_494: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position4y_2__N_446: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position3y_2__N_422: 5 loads, 5 SLICEs
+      Net gen1.game1.bar_position4y2_2__N_734: 5 loads, 5 SLICEs
+
+                                    Page 2
+
+
+
+
+
+Design Summary (cont)
+---------------------
+      Net four_rgb_0__N_142: 1 loads, 1 SLICEs
+      Net eight_rgb_3__N_154: 1 loads, 1 SLICEs
+      Net audio.audioTone_c_N_891: 1 loads, 1 SLICEs
+      Net audio.count_0__N_226: 10 loads, 10 SLICEs
+      Net vga1.ypos_9__N_1003: 17 loads, 17 SLICEs
+      Net vga1.ypos_9__N_1004: 17 loads, 17 SLICEs
+   Top 10 highest fanout non-clock nets:
+      Net VCC_net: 215 loads
+      Net y[3]: 160 loads
+      Net y[4]: 142 loads
+      Net y[2]: 137 loads
+      Net y[5]: 128 loads
+      Net x[4]: 101 loads
+      Net x[3]: 96 loads
+      Net y[6]: 93 loads
+      Net y[1]: 86 loads
+      Net x[2]: 85 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+-------+-------+-----------+
+| IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
+|                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
++---------------------+-----------+-----------+-------+-------+-----------+
+| inputKeys[0]        | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| inputKeys[1]        | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| inputKeys[2]        | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| inputKeys[3]        | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| inputKeys[4]        | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| clkin               | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| audioTone           | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| clkout              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| rgb_out[0]          | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| rgb_out[1]          | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| rgb_out[2]          | OUTPUT    |           |       |       |           |
+
+                                    Page 3
+
+
+
+
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+-------+-------+-----------+
+| rgb_out[3]          | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| rgb_out[4]          | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| rgb_out[5]          | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| vsyncout            | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| hsyncout            | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+
+Removed logic
+-------------
+
+Block i1 was optimized away.
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                 Pin/Node Value
+  PLL Instance Name:                            pll/lscc_pll_inst/u_PLL_B
+  Input Reference Clock:               PIN      clkin_c
+  Output Clock(CoreA):                 PIN      clkout_c
+  Output Clock(GlobalA):               NODE     vga_clk
+  Output Clock(CoreB):                          NONE
+  Output Clock(GlobalB):                        NONE
+  Feedback input:                      NODE     pll.lscc_pll_inst.feedback_w
+  Internal Feedback output:            NODE     pll.lscc_pll_inst.feedback_w
+  BYPASS signal:                                GND
+  LATCH signal:                                 GND
+  Lock Signal:                                  NONE
+  Input Clock Frequency (MHz):                  NA
+  Reference Divider:                            0
+  Feedback Divider:                             66
+  VCO Divider:                                  5
+  ENABLE_ICEGATE_PORTA:                         0
+  ENABLE_ICEGATE_PORTB:                         0
+  PLLOUT_SELECT_PORTA:                          GENCLK
+  PLLOUT_SELECT_PORTB:                          GENCLK
+  SHIFTREG_DIV_MODE:                            0
+  DELAY_ADJUSTMENT_MODE_RELATIVE:               FIXED
+  FDA_RELATIVE:                                 0
+  FEEDBACK_PATH:                                SIMPLE
+  DELAY_ADJUSTMENT_MODE_FEEDBACK:               FIXED
+  FDA_FEEDBACK:                                 0
+  FILTER_RANGE:                                 1
+  EXTERNAL_DIVIDE_FACTOR:                       NONE
+  TEST Mode:                                    0
+
+ASIC Components
+---------------
+
+Instance Name: gen1/rom1/mux_44
+         Type: EBR
+Instance Name: gen1/rom1/mux_42
+         Type: EBR
+
+                                    Page 4
+
+
+
+
+
+ASIC Components (cont)
+----------------------
+Instance Name: gen1/rom1/mux_41
+         Type: EBR
+Instance Name: gen1/rom1/mux_39
+         Type: EBR
+Instance Name: gen1/rom1/mux_38
+         Type: EBR
+Instance Name: gen1/rom1/mux_36
+         Type: EBR
+Instance Name: gen1/rom1/mux_35
+         Type: EBR
+Instance Name: gen1/rom1/mux_34
+         Type: EBR
+Instance Name: gen1/rom1/mux_43
+         Type: EBR
+Instance Name: gen1/rom1/mux_40
+         Type: EBR
+Instance Name: gen1/rom1/mux_37
+         Type: EBR
+Instance Name: gen1/rom1/mux_45
+         Type: EBR
+Instance Name: gen1/five1/x_1__I_0_2
+         Type: EBR
+Instance Name: gen1/five1/x_1__I_0_3
+         Type: EBR
+Instance Name: gen1/five1/x_1__I_0
+         Type: EBR
+Instance Name: gen1/end_screen1/mux_69
+         Type: EBR
+Instance Name: gen1/end_screen1/mux_68
+         Type: EBR
+Instance Name: gen1/end_screen1/mux_66
+         Type: EBR
+Instance Name: gen1/end_screen1/mux_65
+         Type: EBR
+Instance Name: gen1/end_screen1/mux_63
+         Type: EBR
+Instance Name: gen1/end_screen1/mux_62
+         Type: EBR
+Instance Name: gen1/end_screen1/mux_60
+         Type: EBR
+Instance Name: gen1/end_screen1/mux_59
+         Type: EBR
+Instance Name: gen1/end_screen1/mux_58
+         Type: EBR
+Instance Name: gen1/end_screen1/mux_67
+         Type: EBR
+Instance Name: gen1/end_screen1/mux_64
+         Type: EBR
+Instance Name: gen1/end_screen1/mux_61
+         Type: EBR
+Instance Name: decoder/lowBCDtoPatternGen_0__I_0
+         Type: DSP
+Instance Name: pll/lscc_pll_inst/u_PLL_B
+         Type: PLL
+
+
+
+
+                                    Page 5
+
+
+
+
+
+Constraint Summary
+------------------
+
+   Total number of constraints: 18
+   Total number of constraints dropped: 0
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 1 secs
+   Total REAL Time: 2 secs
+   Peak Memory Usage: 87 MB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 6
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995
+     AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent
+     Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems
+     All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor
+     Corporation,  All rights reserved.

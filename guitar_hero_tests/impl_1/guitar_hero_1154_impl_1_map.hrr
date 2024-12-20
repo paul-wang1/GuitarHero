@@ -1,0 +1,193 @@
+---------------------------------------------------
+Report for cell top
+   Instance path: top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       2259        100.0
+                               LUTGATE	       1697        100.0
+                                LUTCCU	        562        100.0
+                                 IOBUF	         16        100.0
+                                PFUREG	        363        100.0
+                                   EBR	         27        100.0
+                                   DSP	          1        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                                  dddd	          1         0.3
+                                   gen	          1        74.1
+                            keyCompare	          1         0.8
+                             playAudio	          1         7.0
+                                  pll1	          1         0.0
+                                   vga	          1         6.2
+---------------------------------------------------
+Report for cell gen
+   Instance path: top/gen1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       1674        74.1
+                               LUTGATE	       1226        72.2
+                                LUTCCU	        448        79.7
+                                PFUREG	        268        73.8
+                                   EBR	         27        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                                 eight	          1         0.2
+                            end_screen	          1         0.0
+                                  five	          1         0.0
+                                  four	          1         1.9
+                                  game	          1        52.9
+                                  nine	          1         1.0
+                                   one	          1         0.9
+                                   rom	          1         0.0
+                                 seven	          1         0.5
+                                   six	          1         0.6
+                                 three	          1         1.2
+                                   two	          1         1.1
+                                  zero	          1         2.8
+---------------------------------------------------
+Report for cell zero
+   Instance path: top/gen1/zero1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         63         2.8
+                               LUTGATE	         63         3.7
+                                PFUREG	          3         0.8
+---------------------------------------------------
+Report for cell two
+   Instance path: top/gen1/two1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         25         1.1
+                               LUTGATE	         25         1.5
+                                PFUREG	          3         0.8
+---------------------------------------------------
+Report for cell three
+   Instance path: top/gen1/three1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         28         1.2
+                               LUTGATE	         28         1.6
+                                PFUREG	          3         0.8
+---------------------------------------------------
+Report for cell six
+   Instance path: top/gen1/six1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         13         0.6
+                               LUTGATE	         13         0.8
+                                PFUREG	          3         0.8
+---------------------------------------------------
+Report for cell seven
+   Instance path: top/gen1/seven1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         12         0.5
+                               LUTGATE	         12         0.7
+                                PFUREG	          3         0.8
+---------------------------------------------------
+Report for cell rom
+   Instance path: top/gen1/rom1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	         12        44.4
+---------------------------------------------------
+Report for cell one
+   Instance path: top/gen1/one1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         20         0.9
+                               LUTGATE	         20         1.2
+                                PFUREG	          3         0.8
+---------------------------------------------------
+Report for cell nine
+   Instance path: top/gen1/nine1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         22         1.0
+                               LUTGATE	         22         1.3
+                                PFUREG	          3         0.8
+---------------------------------------------------
+Report for cell game
+   Instance path: top/gen1/game1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	       1194        52.9
+                               LUTGATE	        746        44.0
+                                LUTCCU	        448        79.7
+                                PFUREG	        236        65.0
+---------------------------------------------------
+Report for cell four
+   Instance path: top/gen1/four1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         44         1.9
+                               LUTGATE	         44         2.6
+                                PFUREG	          3         0.8
+---------------------------------------------------
+Report for cell five
+   Instance path: top/gen1/five1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          3        11.1
+---------------------------------------------------
+Report for cell end_screen
+   Instance path: top/gen1/end_screen1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	          2         0.6
+                                   EBR	         12        44.4
+---------------------------------------------------
+Report for cell eight
+   Instance path: top/gen1/eight1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          4         0.2
+                               LUTGATE	          4         0.2
+                                PFUREG	          3         0.8
+---------------------------------------------------
+Report for cell dddd
+   Instance path: top/decoder
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          6         0.3
+                               LUTGATE	          6         0.4
+                                   DSP	          1        100.0
+---------------------------------------------------
+Report for cell keyCompare
+   Instance path: top/compare
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         17         0.8
+                               LUTGATE	          9         0.5
+                                LUTCCU	          8         1.4
+                                PFUREG	         12         3.3
+---------------------------------------------------
+Report for cell playAudio
+   Instance path: top/audio
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        158         7.0
+                               LUTGATE	        120         7.1
+                                LUTCCU	         38         6.8
+                                PFUREG	         19         5.2
+---------------------------------------------------
+Report for cell vga
+   Instance path: top/vga1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        140         6.2
+                               LUTGATE	         72         4.2
+                                LUTCCU	         68        12.1
+                                PFUREG	         64        17.6
+---------------------------------------------------
+Report for cell pll1
+   Instance path: top/pll
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+pll1_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")	          1         0.0
+---------------------------------------------------
+Report for cell pll1_ipgen_lscc_pll(DIVR="0",DIVF="66",DIVQ="5",FILTER_RANGE="1",PLLOUT_SELECT_PORTA="GENCLK",PLLOUT_SELECT_PORTB="GENCLK",FREQUENCY_PIN_REFERENCECLK="12.000000")
+   Instance path: top/pll/lscc_pll_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
