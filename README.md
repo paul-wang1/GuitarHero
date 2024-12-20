@@ -1,6 +1,6 @@
 # GuitarHero
 
-Architectual Overview:
+Architectural Overview:
 
 Implemented Hardware:
 
