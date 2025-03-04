@@ -26,12 +26,16 @@ correctNote <= '1' when expectedkey_in_keyCompare = not inputkey_in_keyCompare e
 key_current <= expectedkey_in_keyCompare;
 enableaudio_from_keyCompare <= correctNote;
 
+
+--check to play valid key
 process (clk) begin
 	if rising_edge(clk) then
 	key_previous <= key_current;
 		if (reset_count = '1') then
 			counter <= 6d"0";
 		end if;
+
+		-- make sure the key being played isn't negative
 		if(expectedkey_in_keyCompare /= "00000") then
 			if (key_current = key_previous) then
 				if (is_new_key = '1') and correctNote = '1' then 	
