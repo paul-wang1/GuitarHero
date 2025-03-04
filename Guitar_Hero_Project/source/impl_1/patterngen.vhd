@@ -189,6 +189,7 @@ begin
 --x_in <= x(9 downto 2);
 --y_in <= y(8 downto 2);
 
+--game state machine
 process (clk) begin
 	if rising_edge(clk) then
 		case curr_state is
@@ -216,11 +217,14 @@ process (clk) begin
 		end if;
 end process;
 
+
+-- declaring components
 rom1 : rom port map (clk => clk, y_in => y(8 downto 3), x_in => x(9 downto 3), rgb => start_screen_rgb);
 end_screen1 : end_screen port map (clk => clk, y_in => y(8 downto 3), x_in => x(9 downto 3), rgb => end_screen_rgb);
 game1 : game port map(clk => clk, x=>x, y=>y, rgb=>game_rgb, bar1out => bar1out, bar2out => bar2out, bar3out => bar3out, bar4out => bar4out, bar5out => bar5out, game_start => game_start, go_to_end => go_to_end);
 expected <= bar1out & bar2out & bar3out & bar4out & bar5out;
 
+-- declaring digit components
 zero1 : zero port map (clk => clk, y_in => y(6 downto 1), x_in => x(5 downto 1), rgb => zero_rgb);
 one1 : one port map (clk => clk, y_in => y(6 downto 1), x_in => x(5 downto 1), rgb => one_rgb);
 two1 : two port map (clk => clk, y_in => y(6 downto 1), x_in => x(5 downto 1), rgb => two_rgb);
@@ -254,6 +258,7 @@ ones_digit_rgb <= nine_rgb when onesdigit = 9 else
   eight_rgb when onesdigit = 8 else
 zero_rgb;
 
+--state screen stuff
 state_screen <= start_screen_rgb when curr_state = start_screen else end_screen_rgb;
 reset_score <= '1' when curr_state <= start_screen else '0';
 rgb1 <= 
